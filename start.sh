@@ -1,2 +1,3 @@
 #!/bin/bash
-gunicorn -k eventlet -w 1 app:app
+hypercorn app:app --bind 0.0.0.0:5000
+chmod +x start.sh
